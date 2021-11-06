@@ -14,3 +14,13 @@
     background-size: cover;
     padding: 5rem 0;
 }
+.slideDiv{
+    padding: 9rem 3rem;
+}
+.slider{
+    height: 600px !important;
+    z-index: -1 !important;
+}
+.bannerCards{
+    margin-top: -50px;
+}
