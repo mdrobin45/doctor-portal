@@ -1,0 +1,16 @@
+.counterBg{
+    background: url('../images//counterBannerBg.jpg');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    padding: 6rem 0;
+}
+.appointmentBg{
+    background: url('../images//make-appointment-bg.jpg');
+    background-position: right center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    padding: 5rem 0;
+}

@@ -1,0 +1,32 @@
+[
+    {
+        "title": "ROOT TREATMENT",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam ut lacus enim ultrices ultricies nec sit amet turpis.",
+        "img": "https://i.ibb.co/Z2tWNSL/root-treatment.png"
+    },
+    {
+        "title": "WISDOM TEETH",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam ut lacus enim ultrices ultricies nec sit amet turpis.",
+        "img": "https://i.ibb.co/MMRNrTm/wisdom-teeth.png"
+    },
+    {
+        "title": "DENTAL BRIDGES",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam ut lacus enim ultrices ultricies nec sit amet turpis.",
+        "img": "https://i.ibb.co/DwS4hXx/dental-bridges.png"
+    },
+    {
+        "title": "FAMILY DENTISTRY",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam ut lacus enim ultrices ultricies nec sit amet turpis.",
+        "img": "https://i.ibb.co/JjGSh0z/family-dentistry.png"
+    },
+    {
+        "title": "DENTAL IMPLANT",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam ut lacus enim ultrices ultricies nec sit amet turpis.",
+        "img": "https://i.ibb.co/kM7789t/dental-implant.png"
+    },
+    {
+        "title": "GENERAL DENTISTRY",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam ut lacus enim ultrices ultricies nec sit amet turpis.",
+        "img": "https://i.ibb.co/dQJys6d/general-dentistry.png"
+    }
+]
