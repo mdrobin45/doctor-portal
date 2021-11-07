@@ -4,6 +4,7 @@ import Footer from './Components/Footer/Footer';
 import Header from './Components/Header/Header';
 import About from './Components/Pages/About/About';
 import Home from './Components/Pages/Home/Home';
+import Services from './Components/Pages/Services/Services';
 import APIContextProvider from './ContextAPI/APIContextProvider';
 
 const App = () =>
@@ -15,7 +16,8 @@ const App = () =>
         <Routes>
           <Route path='/' element={<Home/>}/>
           <Route path='/home' element={<Home />} />
-          <Route path='/about' element={<About/>}/>
+          <Route path='/about' element={<About />} />
+          <Route path='/services' element={<Services/>}/>
         </Routes>
         <Footer/>
       </BrowserRouter>
