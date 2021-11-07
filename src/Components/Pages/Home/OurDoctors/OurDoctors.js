@@ -4,6 +4,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import useAPI from '../../../../Hooks/useAPI';
 import Button from '../../../Button/Button';
+import SingleDoctor from './SingleDoctor';
 
 const OurDoctors = () =>
 {
@@ -24,7 +25,7 @@ const OurDoctors = () =>
             </div>
             <Slider className='pb-16' {...settings}>
                 {
-                    doctors.map(doctor=><EveryDoctor doctor={doctor}/>)      
+                    doctors.map(doctor=><SingleDoctor doctor={doctor}/>)      
                 }
             </Slider>
       </div>
@@ -32,20 +33,4 @@ const OurDoctors = () =>
 };
 
 
-// Every Doctor
-const EveryDoctor = ({doctor}) =>
-{
-    const { img, title, about, name } = doctor;
-    return (
-        <div className='p-6 w-10/12 text-center'>
-            <img className='m-auto' src={img} alt="Profile" />
-            <h2 className='text-2xl font-bold text-darkGreen py-3'>{name}</h2>
-            <h3 className='text-lg'>{title}</h3>
-            <p className='text-lg pt-3 text-gray-500'>{about}</p>
-            <div className='text-center'>
-                <Button url='/profile' btnText='View Profile'/>
-            </div>
-        </div>
-    )
-}
 export default OurDoctors;

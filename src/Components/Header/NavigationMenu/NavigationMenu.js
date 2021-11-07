@@ -8,8 +8,9 @@ import { NavLink } from 'react-router-dom';
 const navigation = [
     { name: 'Home', to:'/home', current: true },
     { name: 'About', to:'/about', current: false },
-    { name: 'Services', to:'/services', current: false },
-    { name: 'Contact', to:'/contact', current: false },
+  { name: 'Services', to: '/services', current: false },
+  { name: 'Doctors', to:'/doctors', current: false },
+    { name: 'Contact', to:'/contact', current: false }
   ]
   
   function classNames(...classes) {
