@@ -1,5 +1,4 @@
 import React from 'react';
-import useAPI from '../../../Hooks/useAPI';
 import AppointmentBanner from './AppointmentBanner/AppointmentBanner';
 import BannerCard from './BannerCard/BannerCard';
 import Blog from './Blog/Blog';
