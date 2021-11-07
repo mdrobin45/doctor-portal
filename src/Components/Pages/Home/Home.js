@@ -1,4 +1,5 @@
 import React from 'react';
+import useAPI from '../../../Hooks/useAPI';
 import AppointmentBanner from './AppointmentBanner/AppointmentBanner';
 import BannerCard from './BannerCard/BannerCard';
 import Blog from './Blog/Blog';
@@ -7,18 +8,21 @@ import HomeBanner from './HomeBanner/HomeBanner';
 import OurDoctors from './OurDoctors/OurDoctors';
 import QualityService from './QualityService/QualityService';
 import Services from './Services/Services';
+import Testimonial from './Testimonial/Testimonial';
 
-const Home = () => {
+const Home = () =>
+{
     return (
         <div>
             <HomeBanner />
             <BannerCard/>
             <QualityService />
-            <CounterBanner/>
-            <Services />
             <AppointmentBanner />
+            <Services />
+            <CounterBanner/>
             <Blog />
-            <OurDoctors/>
+            <OurDoctors />
+            <Testimonial/>
         </div>
     );
 };

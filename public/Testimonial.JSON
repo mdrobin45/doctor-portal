@@ -1,0 +1,20 @@
+[
+    {
+        "name": "Thomas Smith,",
+        "location": "Victoria",
+        "quote": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam ut lacus vitae enim ultrices ultricies nec sit amet turpis. Pellentesque a nulla tempor, suscipit mauris condimentum, ultrices sem. In vehicula, justo laoreet faucibus aliquam, metus lacus iaculis eros...",
+        "img": "https://i.ibb.co/MNtv8QG/testimonial-img2.png"
+    },
+    {
+        "name": "Thomas Smith",
+        "location": "London",
+        "quote": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam ut lacus vitae enim ultrices ultricies nec sit amet turpis. Pellentesque a nulla tempor, suscipit mauris condimentum, ultrices sem. In vehicula, justo laoreet faucibus aliquam, metus lacus iaculis eros...",
+        "img": "https://i.ibb.co/DzfM1fk/testimonial-img3.png"
+    },
+    {
+        "name": "Thomas Smith",
+        "location": "Victoria",
+        "quote": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam ut lacus vitae enim ultrices ultricies nec sit amet turpis. Pellentesque a nulla tempor, suscipit mauris condimentum, ultrices sem. In vehicula, justo laoreet faucibus aliquam, metus lacus iaculis eros...",
+        "img": "https://i.ibb.co/2STHNdn/testimonial-img1-1.png"
+    }
+]

@@ -24,3 +24,9 @@
 .bannerCards{
     margin-top: -50px;
 }
+.allPageBanner{
+    background-position: center top !important;
+    background-size:cover !important;
+    background-repeat:no-repeat !important;
+    padding:10rem 0;
+}
