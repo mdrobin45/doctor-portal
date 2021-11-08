@@ -3,7 +3,6 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css"; 
 import "slick-carousel/slick/slick-theme.css";
 import useAPI from '../../../../Hooks/useAPI';
-import Button from '../../../Button/Button';
 import SingleDoctor from './SingleDoctor';
 
 const OurDoctors = () =>
@@ -25,7 +24,7 @@ const OurDoctors = () =>
             </div>
             <Slider className='pb-16' {...settings}>
                 {
-                    doctors.map(doctor=><SingleDoctor doctor={doctor}/>)      
+                    doctors.map(doctor=><SingleDoctor key={doctor._id} doctor={doctor}/>)      
                 }
             </Slider>
       </div>

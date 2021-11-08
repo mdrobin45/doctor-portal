@@ -22,7 +22,7 @@ const Testimonial = () =>
             </div>
             <Slider {...settings}>
                 {
-                testimonials.map(item=><SingleTestimonial item={item}/>)     
+                testimonials.map((item,index)=><SingleTestimonial key={index} item={item}/>)     
                 }
             </Slider>
       </div>

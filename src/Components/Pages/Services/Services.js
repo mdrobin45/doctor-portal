@@ -14,7 +14,7 @@ const Services = () =>
             <PageBanner title='Our Services' bg={serviceBg}/>
             <div className='grid grid-cols-3 mt-20 gap-4 container text-center'>
                 {
-                    services.map(service=><SingleService service={service}/>)
+                    services.map(service=><SingleService key={service._id} service={service}/>)
                 }
             </div>
             <CounterBanner />

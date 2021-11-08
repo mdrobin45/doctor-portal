@@ -1,19 +1,13 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import footerLogo from '../images/footer-logo.png'
 import {MdOutlineEmail} from 'react-icons/md'
 import {BsTelephone,BsTwitter} from 'react-icons/bs'
 import {FaFacebookF,FaLinkedinIn} from 'react-icons/fa'
+import useAPI from '../../Hooks/useAPI';
 
 const Footer = () =>
 {
-    const [blogs, setBlogs] = useState([]);
-    useEffect(() =>
-    {
-        fetch('/Blog.JSON')
-            .then(res => res.json())
-            .then(data => setBlogs(data));
-    }, [])
-    
+    const { blogs } = useAPI();
     return (
         <>
             <div className='flex justify-between container items-center text-white bg-gray-700 py-20'>
@@ -61,7 +55,7 @@ const Footer = () =>
                     <h2 className='text-2xl uppercase'>Our Latest Blog</h2>
                     {
                         
-                        blogs.slice(0,2).map(blog=><FooterBlog blog={blog}/>)
+                        blogs.slice(0,2).map(blog=><FooterBlog key={blog._id} blog={blog}/>)
                     }
                 </div>
 

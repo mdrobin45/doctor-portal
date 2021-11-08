@@ -11,7 +11,7 @@ const useFetchData = () =>
     // Fetch blogs
     useEffect(() =>
     {
-        fetch('/Blog.JSON')
+        fetch('https://pure-atoll-71466.herokuapp.com/blogs')
             .then(res => res.json())
             .then(data => SetBlogs(data));
     }, [])
@@ -19,7 +19,7 @@ const useFetchData = () =>
     // Fetch services
     useEffect(() =>
     {
-        fetch('/HomeServices.JSON')
+        fetch('https://pure-atoll-71466.herokuapp.com/services')
             .then(res => res.json())
             .then(data=>setServices(data))
     }, [])
@@ -27,7 +27,7 @@ const useFetchData = () =>
     // Fetch doctors
     useEffect(() =>
     {
-        fetch('/OurDoctors.JSON')
+        fetch('https://pure-atoll-71466.herokuapp.com/doctors')
             .then(res => res.json())
             .then(data=>setDoctors(data))
     }, [])
