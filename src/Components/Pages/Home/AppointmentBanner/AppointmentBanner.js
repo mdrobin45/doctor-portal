@@ -5,6 +5,7 @@ import 'react-datetime/css/react-datetime.css';
 import "react-datepicker/dist/react-datepicker.css";
 import '../../../CustomStyle/Style.css'
 import axios from 'axios';
+import Swal from 'sweetalert2'
 import useAPI from '../../../../Hooks/useAPI';
 
 
@@ -14,14 +15,31 @@ const AppointmentBanner = () =>
     const { doctors } = useAPI().dataFetch;
     const { services } = useAPI().dataFetch;
     const { user } = useAPI().auth;
-    const { register, handleSubmit, control } = useForm();
+    const { register,reset, handleSubmit, control } = useForm();
     const email = {email: user?.email };
     
     const onSubmit = data =>
     {
-        console.log(data);
-        axios.post('http://localhost:5000/appointment', { ...data,...email})
-            .then(res => console.log(res))
+        axios.post('https://pure-atoll-71466.herokuapp.com/appointment', { ...data, ...email })
+            .then(res =>
+            {
+                if(res.status === 200 && res.statusText === 'OK'){
+                    Swal.fire({
+                        position: 'center center',
+                        icon: 'success',
+                        title: 'Appointment Book Successful',
+                        showConfirmButton: false,
+                        timer: 1500
+                    })
+                    reset();
+                } else {
+                    Swal.fire({
+                        icon: 'error',
+                        title: 'Oops...',
+                        text: 'Something went wrong!',
+                      })
+                }
+            })
     };
     return (
         <div className='appointmentBg'>
