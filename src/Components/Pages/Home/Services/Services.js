@@ -5,7 +5,7 @@ import SingleService from './SingleService';
 
 const Services = () =>
 {
-    const { services } = useAPI();
+    const { dataFetch } = useAPI();
     return (
         <>
             <div className='text-center w-1/2 pt-6 pb-10 m-auto'>
@@ -15,7 +15,7 @@ const Services = () =>
             
             <div className='grid grid-cols-3 gap-4 container text-center'>
                 {
-                    services.map(service=><SingleService key={service._id} service={service}/>)
+                    dataFetch.services.map(service=><SingleService key={service._id} service={service}/>)
                 }
             </div>
             <div className='text-center'>

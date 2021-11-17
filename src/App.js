@@ -7,6 +7,7 @@ import Doctors from './Components/Pages/Doctors/Doctors';
 import Home from './Components/Pages/Home/Home';
 import Services from './Components/Pages/Services/Services';
 import APIContextProvider from './ContextAPI/APIContextProvider';
+import ImageUpload from './Components/Pages/ImageUpload/ImageUpload'
 
 const App = () =>
 {
@@ -19,7 +20,8 @@ const App = () =>
           <Route path='/home' element={<Home />} />
           <Route path='/about' element={<About />} />
           <Route path='/services' element={<Services />} />
-          <Route path='/doctors' element={<Doctors/>}/>
+          <Route path='/doctors' element={<Doctors />} />
+          <Route path='/upload-image' element={<ImageUpload/>}/>
         </Routes>
         <Footer/>
       </BrowserRouter>

@@ -7,7 +7,7 @@ import useAPI from '../../Hooks/useAPI';
 
 const Footer = () =>
 {
-    const { blogs } = useAPI();
+    const { dataFetch } = useAPI();
     return (
         <>
             <div className='flex justify-between container items-center text-white bg-gray-700 py-20'>
@@ -55,25 +55,29 @@ const Footer = () =>
                     <h2 className='text-2xl uppercase'>Our Latest Blog</h2>
                     {
                         
-                        blogs.slice(0,2).map(blog=><FooterBlog key={blog._id} blog={blog}/>)
+                        dataFetch.blogs.slice(0,2).map(blog=><FooterBlog key={blog._id} blog={blog}/>)
                     }
                 </div>
 
                 <div className='pt-16 w-3/12'>
                     <h2 className='text-2xl uppercase'>Opening Ours</h2>
                     <table className='block py-4'>
-                        <tr className='pt-4 block'>
-                            <td className='pr-6'>Mon – Fri</td>
-                            <td>9am – 10pm</td>
-                        </tr>
-                        <tr className='pt-4 block'>
-                            <td className='pr-6'>Saturday</td>
-                            <td>Closed</td>
-                        </tr>
-                        <tr className='pt-4 block'>
-                            <td className='pr-6'>Sunday</td>
-                            <td>Closed</td>
-                        </tr>
+                        <thead></thead>
+                        <tbody>
+                            <tr className='pt-4 block'>
+                                <td className='pr-6'>Mon – Fri</td>
+                                <td>9am – 10pm</td>
+                            </tr>
+                            <tr className='pt-4 block'>
+                                <td className='pr-6'>Saturday</td>
+                                <td>Closed</td>
+                            </tr>
+                            <tr className='pt-4 block'>
+                                <td className='pr-6'>Sunday</td>
+                                <td>Closed</td>
+                            </tr>
+                        </tbody>
+                        <tfoot></tfoot>
                     </table>
                     <hr className='mt-6' />
                     <h2 className='uppercase py-4 text-xl font-bold'>Subscribe with us</h2>

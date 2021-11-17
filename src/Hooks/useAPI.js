@@ -1,4 +1,4 @@
-import { useContext } from "react"
+import { useContext } from "react";
 import { APIContext } from "../ContextAPI/APIContextProvider";
 
 const useAPI = () =>

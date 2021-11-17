@@ -7,7 +7,7 @@ import SingleDoctor from './SingleDoctor';
 
 const OurDoctors = () =>
 {
-    const { doctors } = useAPI();
+    const { dataFetch } = useAPI();
     const settings = {
         infinite: true,
         speed: 500,
@@ -24,7 +24,7 @@ const OurDoctors = () =>
             </div>
             <Slider className='pb-16' {...settings}>
                 {
-                    doctors.map(doctor=><SingleDoctor key={doctor._id} doctor={doctor}/>)      
+                    dataFetch.doctors.map(doctor=><SingleDoctor key={doctor._id} doctor={doctor}/>)      
                 }
             </Slider>
       </div>

@@ -5,7 +5,7 @@ import SingleBlog from './SingleBlog';
 
 const Blog = () =>
 {
-    const { blogs } = useAPI();
+    const { dataFetch } = useAPI();
     return (
         <>
             <div className='text-center w-1/2 pt-6 pb-10 m-auto'>
@@ -14,7 +14,7 @@ const Blog = () =>
             </div>
             <div className='flex container justify-center'>
                 {
-                    blogs.map(blog => <div>
+                    dataFetch.blogs.map(blog => <div key={blog?._id}>
                         <SingleBlog blog={blog} />
                     </div>)
                 }

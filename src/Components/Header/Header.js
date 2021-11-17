@@ -4,12 +4,12 @@ import logo from '../images/logo.png';
 import { AiOutlineUserAdd } from 'react-icons/ai';
 import { VscKey } from 'react-icons/vsc';
 import NavigationMenu from './NavigationMenu/NavigationMenu';
-import useFirebase from '../../Hooks/useFirebase';
+import useAPI from '../../Hooks/useAPI';
 
 const Header = () =>
 {
-    const { user, googleSignIn } = useFirebase();
-    console.log(user);
+    
+    const { auth } = useAPI();
     return (
         <div>
             <div className='flex justify-between items-center container'>
@@ -19,7 +19,7 @@ const Header = () =>
                 <div className='flex justify-center items-center'>
                     <div className='flex px-4 items-center'>
                         <VscKey className='text-4xl pr-3' />
-                        <Link onClick={googleSignIn} className='text-xl hover:text-orange transition-all' to='/login'>Login</Link>
+                        <Link onClick={auth.googleSignIn} className='text-xl hover:text-orange transition-all' to='/login'>Login</Link>
                     </div>
                     <div className='flex items-center'>
                         <AiOutlineUserAdd className='text-4xl pr-3' />

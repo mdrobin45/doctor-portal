@@ -8,13 +8,13 @@ import OurDoctors from '../Home/OurDoctors/OurDoctors';
 
 const Services = () =>
 {
-    const { services } = useAPI();
+    const { dataFetch } = useAPI();
     return (
         <div>
             <PageBanner title='Our Services' bg={serviceBg}/>
             <div className='grid grid-cols-3 mt-20 gap-4 container text-center'>
                 {
-                    services.map(service=><SingleService key={service._id} service={service}/>)
+                    dataFetch.services.map(service=><SingleService key={service._id} service={service}/>)
                 }
             </div>
             <CounterBanner />

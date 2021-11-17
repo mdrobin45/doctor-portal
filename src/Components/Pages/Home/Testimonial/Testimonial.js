@@ -6,7 +6,7 @@ import useAPI from '../../../../Hooks/useAPI';
 
 const Testimonial = () =>
 {
-    const { testimonials } = useAPI();
+    const { dataFetch } = useAPI();
     const settings = {
         infinite: true,
         speed: 500,
@@ -22,7 +22,7 @@ const Testimonial = () =>
             </div>
             <Slider {...settings}>
                 {
-                testimonials.map((item,index)=><SingleTestimonial key={index} item={item}/>)     
+                dataFetch.testimonials.map((item,index)=><SingleTestimonial key={index} item={item}/>)     
                 }
             </Slider>
       </div>
