@@ -8,6 +8,8 @@ import Home from './Components/Pages/Home/Home';
 import Services from './Components/Pages/Services/Services';
 import APIContextProvider from './ContextAPI/APIContextProvider';
 import Appointment from './Components/Pages/Appointment/Appointment';
+import Login from './Components/Pages/Account/Login/Login';
+import Register from './Components/Pages/Account/Register/Register';
 
 const App = () =>
 {
@@ -22,6 +24,8 @@ const App = () =>
           <Route path='/services' element={<Services />} />
           <Route path='/doctors' element={<Doctors />} />
           <Route path='/appointment/:id' element={<Appointment/>}/>
+          <Route path='/login' element={<Login/>}/>
+          <Route path='/register' element={<Register/>}/>
         </Routes>
         <Footer/>
       </BrowserRouter>

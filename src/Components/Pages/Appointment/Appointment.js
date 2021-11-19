@@ -18,8 +18,12 @@ const Appointment = () =>
     {
         fetch(`https://pure-atoll-71466.herokuapp.com/services/${id}`)
             .then(res => res.json())
-            .then(data => setServiceTitle(data[0]?.title));
-    }, [id])
+            .then(data =>
+            {
+                setServiceTitle(data[0]?.title)
+                reset()
+            });
+    }, [reset,id])
     const onSubmit = data =>
     {
         axios.post('https://pure-atoll-71466.herokuapp.com/appointment', { ...data, ...email })
@@ -43,12 +47,12 @@ const Appointment = () =>
                 }
             })
     };
-    console.log(user);
     return (
         <div>
             <form className='border m-auto my-20 p-10 pt-6 shadow w-10/12' onSubmit={handleSubmit(onSubmit)}>
+            <h2 className='text-4xl text-darkGreen text-center pb-10 font-bold'>Make an Appointment</h2>
                 <div className='flex items-center'>
-                    <input disabled value={user?.displayName} className='border-b outline-none mr-3 my-3 px-3 py-3 rounded w-full' {...register("name", { required: true })} placeholder='Name'/>
+                    <input value={user?.displayName} className='border-b outline-none mr-3 my-3 px-3 py-3 rounded w-full' {...register("name", { required: true })} placeholder='Name'/>
                     <input className='border-b outline-none my-3 px-3 py-3 rounded w-full' {...register("phone", { required: true })} placeholder='Phone' type='number'/>
                 </div>
                 <div className='flex items-center'>
@@ -81,7 +85,7 @@ const Appointment = () =>
                             doctors?.map(doctor=><option value={doctor?.name} key={doctor?._id}>{doctor?.name}</option>)
                         }
                     </select>
-                    <input disabled value={serviceTitle} className='border-b outline-none my-3 px-3 py-3 rounded w-full' {...register("service", { required: true })} type='text'/>
+                    <input value={serviceTitle} className='border-b outline-none my-3 px-3 py-3 rounded w-full' {...register("service", { required: true })} type='text'/>
                 </div>
                 <input className='w-full py-3 uppercase text-lg text-white bg-orange hover:bg-darkGreen transition-all rounded cursor-pointer' value='Make an appointment' type="submit" />
             </form>
