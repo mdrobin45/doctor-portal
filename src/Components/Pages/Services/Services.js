@@ -12,7 +12,7 @@ const Services = () =>
     return (
         <div>
             <PageBanner title='Our Services' bg={serviceBg}/>
-            <div className='grid grid-cols-3 mt-20 gap-4 container text-center'>
+            <div className='grid grid-cols-3 mt-20 pb-10 gap-4 container text-center'>
                 {
                     dataFetch.services.map(service=><SingleService key={service._id} service={service}/>)
                 }

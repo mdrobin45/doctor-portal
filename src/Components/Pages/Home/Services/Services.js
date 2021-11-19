@@ -18,7 +18,7 @@ const Services = () =>
                     dataFetch.services.map(service=><SingleService key={service._id} service={service}/>)
                 }
             </div>
-            <div className='text-center'>
+            <div className='text-center pb-10 mt-10'>
                 <Button url='/services' btnText='View All Services'/>
             </div>
         </>

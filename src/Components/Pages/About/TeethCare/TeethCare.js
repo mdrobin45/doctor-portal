@@ -19,7 +19,10 @@ const TeethCare = () => {
                     <img src={award} alt="Logo" />
                     <img src={privetDencity} alt="Logo" />
                 </div>
-                <Button url='/appointment' btnText='Make an appointment'/>
+                <div className='pb-10 mt-10'>
+                   <Button url='/appointment' btnText='Make an appointment'/> 
+                </div>
+                
             </div>
         </div>
     );

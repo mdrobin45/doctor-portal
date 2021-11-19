@@ -10,7 +10,7 @@ const SingleDoctor = ({doctor}) =>
             <h2 className='text-2xl font-bold text-darkGreen py-3'>{name}</h2>
             <h3 className='text-lg'>{title}</h3>
             <p className='text-lg pt-3 text-gray-500'>{about}</p>
-            <div className='text-center'>
+            <div className='text-center pb-10 mt-10'>
                 <Button url='/profile' btnText='View Profile'/>
             </div>
         </div>

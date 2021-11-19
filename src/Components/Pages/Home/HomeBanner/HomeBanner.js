@@ -42,7 +42,7 @@ const HomeBanner = () =>
                 <h2 className='font-bold text-7xl text-white uppercase'>{slide.title}</h2>
                 <h3 className='text-2xl text-white py-3'>{slide.subTitle}</h3>
                 <p className='block text-lg text-white w-2/4'>{slide.description}</p>
-                <div>
+                <div className='pb-10 mt-10'>
                     <Button url='/appointment' btnText='Book Appointment'/>
                 </div>
             </div>)}

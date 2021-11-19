@@ -19,7 +19,7 @@ const Blog = () =>
                     </div>)
                 }
             </div>
-            <div className='text-center'>
+            <div className='text-center pb-10 mt-10'>
                 <Button url='/blogs' btnText='View All Blogs'/>
             </div>
         </>
